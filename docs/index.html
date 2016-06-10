@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Test page</title>
-    <script src="test.js"></script>
+    <script>
+        console.warn('hello world');
+        var sync = true;
+
+        addTag('script', {src: 'test.js'}, sync);
+
+        function addTag(name, attributes, sync) {
+            var el = document.createElement(name),
+                attrName;
+
+            for (attrName in attributes) {
+                el.setAttribute(attrName, attributes[attrName]);
+            }
+
+            sync ? document.write(outerHTML(el)) : headEl.appendChild(el);
+        }
+    </script>
 </head>
 <body>
 <h1>It is success</h1>
-</body>g
+</body>
 </html>

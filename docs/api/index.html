@@ -33,7 +33,7 @@
 
 
 
-      addTag('script', {src: 'js/angular.min.js', type: 'application/javascript'}, sync);
+      addTag('script', {src: 'js/angular.min.js'}, sync);
 
       addTag('script', {src: 'js/angular-animate.min.js'}, sync);
 
@@ -43,8 +43,8 @@
       addTag('script', {src: 'js/angular-bootstrap.js'}, sync);
       addTag('script', {src: 'js/angular-bootstrap-prettify.js'}, sync);
       addTag('script', {src: 'js/docs-setup.js'}, sync);
-      addTag('script', {src: 'js/docs.js'}, sync);
-      addTag('script', {src: 'js/prettify.js'}, sync);
+      addTag('script', {src: 'js/docs.js', type: 'text/javascript'}, sync);
+      addTag('script', {src: 'js/prettify.js', type: 'application/javascript'}, sync);
 
       function addTag(name, attributes, sync) {
         var el = document.createElement(name),
@@ -210,4 +210,3 @@
 
 </body>
 </html>
-g
